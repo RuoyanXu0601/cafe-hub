@@ -1,0 +1,162 @@
+/* Global Style */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+}
+
+.main-header {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+/* Navbar Style */
+.navbar-brand {
+    font-weight: bold;
+    color: #5a3e36;
+}
+
+.nav-link:hover {
+    color: #a9745f;
+}
+/* Hero */
+.hero-section {
+    padding: 60px 20px;
+    background-image: url('../assets/coffee-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+/* Search */
+.hero-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Input + Button */
+input#searchInput {
+    padding: 10px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 600px;
+    font-size: 1rem;
+    border: none;
+}
+
+/* Button */
+.hero-section button[type="submit"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    width: 90%;
+    max-width: 600px;
+    cursor: pointer;
+}
+
+/* Layout changes */
+@media (min-width: 768px) {
+    .hero-section form {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    input#searchInput,
+    .hero-section button[type="submit"] {
+        width: auto;
+        flex: 1;
+        max-width: none;
+    }
+
+    input#searchInput {
+        margin-right: 10px;
+    }
+}
+
+/* Cafe Carousel */
+.featured-cafes h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Descendant Selector */
+.featured-cafes .carousel-inner .carousel-item {
+    height: 300px;
+}
+
+.featured-cafes .carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Adjacent Selector */
+h2 + div {
+    margin-top: 20px;
+}
+
+/* Pseudo class */
+input:focus {
+    outline: 2px solid #a9745f;
+}
+
+/* Pseudo element */
+h1::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    margin: 10px auto;
+    background: #a9745f;
+}
+
+/* ID */
+#carouselItems {
+    background: #fff;
+    border-radius: 10px;
+}
+/* Background */
+.background-image {
+    background-image: url('../assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #eee;
+  }
+  
+  .dark-mode .navbar {
+    background-color: #333 !important;
+  }
+  
+  .dark-mode .cafe-card,
+  .dark-mode .leisure-card,
+  .dark-mode .card {
+    background-color: #1e1e1e;
+    color: #eee;
+    border: 1px solid #444;
+  }
+  
+  .dark-mode .btn-primary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+  
+  .dark-mode a,
+  .dark-mode .nav-link {
+    color: #eee !important;
+  }
+    

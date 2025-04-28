@@ -1,0 +1,72 @@
+#cafeDetailContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cafe-gallery img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.menu-section, .events-section, .reviews-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.menu-item, .event-item, .review-item {
+    margin-bottom: 15px;
+}
+
+.review-item::before {
+    content: '⭐';
+    margin-right: 5px;
+}
+
+.menu-item:hover {
+    background: #f8f9fa;
+}
+
+.event-item:hover {
+    background: #f8f9fa;
+}
+
+.menu-section .menu-item,
+.events-section .event-item,
+.reviews-section .review-item {
+    padding: 10px;
+}
+
+body {
+    background-image: url('../assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #fafafa; 
+    color: white; 
+}
+
+#cafeDetailContent,
+.menu-section,
+.events-section,
+.reviews-section,
+.menu-item,
+.event-item,
+.review-item {
+    color: white;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, div, li, label {
+    color: white;
+}
+section {
+    color: white;
+}
+
+.leaflet-popup-content {
+    color: black;
+}

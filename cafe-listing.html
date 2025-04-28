@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Explore Cafés</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/listings.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+</head>
+<body>
+
+  <!-- Logo Link -->
+  <header class="nav-header">
+    <a href="index.html" class="nav-logo">Café Hub</a>
+    <button id="darkModeToggle" style="background: transparent; border: none; font-size: 24px; cursor: pointer; margin-left: 20px;">🌙</button>
+  </header>
+
+  <header class="cafe-page-header">
+    <h1>Explore Cafés</h1>
+  </header>
+
+  <section class="filters">
+    <div class="filter-group">
+      <select id="filter">
+        <option value="">Filter by</option>
+        <option value="rating">Rating (Highest First)</option>
+        <option value="amenity">Amenity</option>
+      </select>
+
+      <input type="text" id="searchLocation" class="filter-input" placeholder="Enter address or ZIP code">
+      <button id="searchButton" class="filter-button">Search</button>
+    </div>
+  </section>
+
+  <section id="cafe-list" class="cafe-list"></section>
+
+  <!-- Review -->
+  <div id="reviewModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2>Write a Review</h2>
+      <textarea id="reviewText" placeholder="Type your review here..." rows="5"></textarea>
+      <button id="submitReview">Submit</button>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script type="module" src="js/cafe-listing.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+  <script type="module">
+    import { setupDarkModeToggle } from './js/modules/darkmode.js';
+    setupDarkModeToggle();
+  </script>
+
+  <!-- Modal CSS -->
+  <style>
+    /* Modal Style */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 400px;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #reviewText {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px 15px;
+      font-size: 16px;
+      resize: vertical;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    #submitReview {
+      margin-top: 10px;
+      width: 100%;
+      padding: 10px;
+      background-color: #5a3e36;
+      color: white;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+
+</body>
+</html>

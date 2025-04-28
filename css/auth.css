@@ -1,0 +1,31 @@
+.signup-container,
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+}
+
+.nav-logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white !important;
+  text-decoration: none;
+  background-color: rgba(90, 62, 54, 0.8);
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-logo:hover {
+  background-color: rgba(169, 116, 95, 0.9);
+}
+
+.profile-title, .profile-section-title {
+    color: white;
+}
+/* Dark Mode */
+body.dark-mode .list-group-item {
+    background-color: #1e1e1e;
+    color: #eee;
+  }
+  

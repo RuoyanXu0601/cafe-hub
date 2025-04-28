@@ -1,0 +1,146 @@
+.cafe-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.cafe-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 340px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.cafe-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.cafe-info {
+    padding: 0.75rem;
+}
+
+.cafe-info h3 {
+    margin: 0.3rem 0;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    background: #007aff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+body {
+    background-image: url('../assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.cafe-page-header {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.cafe-page-header h1 {
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6); 
+}
+
+/* filter bar */
+.filters {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filters select {
+    padding: 10px 14px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.filters select:hover {
+    border-color: #a9745f;
+    background-color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+.filters select:focus {
+    outline: none;
+    border-color: #5a3e36;
+    box-shadow: 0 0 0 2px rgba(169, 116, 95, 0.3);
+}
+
+.nav-header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+.nav-logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(90, 62, 54, 0.8);
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-logo:hover {
+    background-color: rgba(169, 116, 95, 0.9);
+}
+/* Search */
+.filters .filter-input,
+.filters .filter-button {
+    padding: 10px 14px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    margin-left: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.filters .filter-input:focus,
+.filters .filter-button:focus {
+    outline: none;
+    border-color: #5a3e36;
+    box-shadow: 0 0 0 2px rgba(169, 116, 95, 0.3);
+}
+
+.filters .filter-button {
+    background-color: #a9745f;
+    color: white;
+    border: none;
+}
+
+.filters .filter-button:hover {
+    background-color: #5a3e36;
+    cursor: pointer;
+}

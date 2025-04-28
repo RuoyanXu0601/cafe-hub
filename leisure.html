@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leisure Time - Café Hub</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/leisure.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="index.html" class="navbar-brand nav-logo">Café Hub</a>
+      <button id="darkModeToggle" style="background: transparent; border: none;">🌙</button>
+    </div>
+  </header>
+
+  <main class="leisure-main">
+    <section class="leisure-intro">
+      <h1>Leisure Time</h1>
+      <p>Start your day with a perfect coffee and a happy mood. Then take a moment to enjoy the beautiful scenery around you — either alone or with friends and family. Discover peaceful parks, charming attractions, and relaxing spaces in your neighborhood!</p>
+    </section>
+
+    <!-- Filter + Search -->
+    <section class="filter-search">
+      <select id="filterOptions">
+        <option value="">Filter by</option>
+        <option value="park">Park</option>
+        <option value="museum">Museum</option>
+        <option value="playground">Playground</option>
+        <option value="attraction">Attraction</option>
+        <option value="scenic">Scenic Spot</option>
+      </select>
+      <input type="text" id="searchInput" placeholder="Enter address or ZIP code" />
+      <button id="searchButton">Search</button>
+    </section>
+
+    <section id="leisure-list" class="leisure-grid">
+    </section>
+  </main>
+
+  <!-- Review -->
+  <div id="reviewModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2>Write a Review</h2>
+      <textarea id="reviewText" placeholder="Type your review here..." rows="5"></textarea>
+      <button id="submitReview">Submit</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/leisure.js"></script>
+
+  <script type="module">
+    import { setupDarkModeToggle } from './js/modules/darkmode.js';
+    setupDarkModeToggle();
+  </script>
+
+  <!-- Modal Style -->
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 400px;
+      border-radius: 10px;
+      position: relative;
+    }
+    .close {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    #reviewText {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px 15px;
+      font-size: 16px;
+      resize: vertical;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    #submitReview {
+      margin-top: 10px;
+      width: 100%;
+      padding: 10px;
+      background-color: #5a3e36;
+      color: white;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    /* Filter + Search */
+    .filter-search {
+      margin: 20px;
+      text-align: center;
+    }
+    .filter-search select,
+    .filter-search input,
+    .filter-search button {
+      padding: 10px;
+      margin: 5px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .filter-search button {
+      background-color: #5a3e36;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+
+</body>
+</html>

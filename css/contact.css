@@ -1,0 +1,77 @@
+.mission {
+    background: #fef7f1;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact-form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+}
+
+input:focus, textarea:focus {
+    border-color: #a9745f;
+}
+
+h1 + p {
+    margin-top: 10px;
+}
+
+body {
+    background-image: url('../assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+.nav-logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white !important;
+    text-decoration: none;
+    background-color: rgba(90, 62, 54, 0.8);
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-logo:hover {
+    background-color: rgba(169, 116, 95, 0.9);
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #eee;
+}
+
+body.dark-mode .navbar {
+    background-color: #333 !important;
+}
+
+body.dark-mode .mission {
+    background-color: rgba(90, 62, 54, 0.8);
+    color: #eee;
+}
+
+body.dark-mode .contact-form {
+    background-color: #444;
+    color: #eee;
+}
+
+body.dark-mode input.form-control,
+body.dark-mode textarea.form-control {
+    background-color: #222;
+    border: 1px solid #666;
+    color: inherit; 
+}
+  

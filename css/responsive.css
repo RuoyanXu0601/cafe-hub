@@ -1,0 +1,32 @@
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 30px 10px;
+    }
+
+    .featured-cafes h2 {
+        font-size: 1.5rem;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    #searchForm {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cafe-gallery img {
+        height: auto;
+    }
+
+    #calendarView {
+        flex-direction: column;
+    }
+
+    .calendar-day {
+        width: 50px;
+        height: 50px;
+        font-size: 0.8rem;
+    }
+}
